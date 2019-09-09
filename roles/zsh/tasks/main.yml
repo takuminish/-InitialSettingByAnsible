@@ -1,0 +1,6 @@
+ - name: zsh install
+   apt:
+     name: zsh
+     update_cache: yes
+ - name: zsh set
+   command: chsh -s '/usr/bin/zsh' vagrant
