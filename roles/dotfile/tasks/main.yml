@@ -1,0 +1,4 @@
+- name: git clone dotfile
+  git:
+    repo: https://github.com/takuminish/.dotfiles
+    dest: ~/.dotfiles

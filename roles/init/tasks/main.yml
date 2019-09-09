@@ -1,0 +1,6 @@
+ - name: init install
+   apt:
+     name:
+       - zsh
+       - git
+     update_cache: yes

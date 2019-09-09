@@ -2,4 +2,8 @@
   user: vagrant
   sudo: yes
   roles:
+    - init
+    - dotfile
     - zsh
+
+    
