@@ -1,2 +1,8 @@
- - name: zsh set
-   command: chsh -s '/usr/bin/zsh' vagrant
+- name: zsh check
+  become: no
+  shell: echo $SHELL
+  register: current_shell
+  changed_when: no
+- name: zsh set
+  shell: chsh -s '/usr/bin/zsh' vagrant
+  when: "'zsh' not in current_shell.stdout"
