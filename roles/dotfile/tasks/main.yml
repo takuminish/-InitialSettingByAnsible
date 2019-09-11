@@ -2,9 +2,6 @@
   git:
     repo: https://github.com/takuminish/.dotfiles
     dest: /home/.dotfiles
-- name: debug
-  debug:
-    var: ansible_env.HOME
 - name: zsh symlink
   file:
     src: /home/.dotfiles/zsh/{{ item }}
