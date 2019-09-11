@@ -1,4 +1,16 @@
 - name: git clone dotfile
   git:
     repo: https://github.com/takuminish/.dotfiles
-    dest: ~/.dotfiles
+    dest: /home/.dotfiles
+- name: debug
+  debug:
+    var: ansible_env.HOME
+- name: zsh symlink
+  file:
+    src: /home/.dotfiles/zsh/{{ item }}
+    dest: /home/vagrant/{{ item }}
+    state: link
+    force: yes
+  with_items:
+    - .zsh.d
+    - .zshrc
