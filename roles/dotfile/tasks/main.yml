@@ -1,11 +1,13 @@
 - name: git clone dotfile
+  become: no
   git:
     repo: https://github.com/takuminish/.dotfiles
-    dest: /home/.dotfiles
+    dest: ~/.dotfiles
 - name: zsh symlink
+  become: no
   file:
-    src: /home/.dotfiles/zsh/{{ item }}
-    dest: /home/vagrant/{{ item }}
+    src: ~/.dotfiles/zsh/{{ item }}
+    dest: ~//{{ item }}
     state: link
     force: yes
   with_items:
