@@ -7,9 +7,19 @@
   become: no
   file:
     src: ~/.dotfiles/zsh/{{ item }}
-    dest: ~//{{ item }}
+    dest: ~/{{ item }}
     state: link
     force: yes
   with_items:
     - .zsh.d
     - .zshrc
+- name: emacs symlink
+  become: no
+  file:
+    src: ~/.dotfiles/emacs/{{ item }}
+    dest: ~/{{ item }}
+    state: link
+    force: yes
+  with_items:
+    - .emacs.d
+

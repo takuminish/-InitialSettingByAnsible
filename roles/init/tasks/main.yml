@@ -4,6 +4,7 @@
        - zsh
        - git
        - gcc
+       - emacs
        - autoconf
        - bison
        - build-essential
