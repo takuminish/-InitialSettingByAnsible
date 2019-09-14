@@ -1,0 +1,12 @@
+- name: git clone rbenv
+  become: no
+  git:
+    repo: https://github.com/rbenv/rbenv
+    dest: ~/.rbenv
+- name: git clone ruby-build
+  become: no
+  git:
+    repo: https://github.com/rbenv/ruby-build
+    dest: ~/.rbenv/plugins/ruby-build
+
+  
