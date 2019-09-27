@@ -1,4 +1,4 @@
- - name: init install
+ - name: apt install
    apt:
      name:
        - zsh
@@ -16,6 +16,7 @@
        - libffi-dev
        - libgdbm5
        - libgdbm-dev
+       - cmake
      update_cache: yes
      force_apt_get: yes
 
