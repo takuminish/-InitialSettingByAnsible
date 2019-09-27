@@ -3,7 +3,7 @@
   user: vagrant
   become: yes
   roles:
-    - init
+    - apt
     - dotfile
     - zsh
     - ruby
